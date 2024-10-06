@@ -29,5 +29,11 @@ void loop() {
   arduboy.print(wii.joyX());
   arduboy.print(" Y:");
   arduboy.print(wii.joyY());
+
+  arduboy.setCursor(0, 16);
+  if (wii.joyUp()) arduboy.print("Up");
+  if (wii.joyDown()) arduboy.print("Down");
+  if (wii.joyLeft()) arduboy.print("Left");
+  if (wii.joyRight()) arduboy.print("Right");
   arduboy.display();
 }
